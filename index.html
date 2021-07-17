@@ -1,0 +1,299 @@
+<html><head>
+	<title>PREDATORAIO Payment Harvester</title>
+    <style type="text/css">
+    *,
+*::after,
+*::before {
+    -webkit-user-select: none;
+    user-select: none;
+}
+body {
+	margin: auto;
+	font-weight: 500;
+    overflow: hidden;
+}
+
+.captchaFooter {
+	background-color: black;
+	bottom: 0;
+	color: white;
+	height: 10vh;
+	width: 100%;
+	text-align: center;
+	padding: 10px 10px 80px;
+}
+
+.center {
+	height: 100%;
+}
+
+.btn {
+	height: 40px !important;
+	width: 90px !important;
+	margin: 5px !important;
+}
+
+#clearSession {
+	width: 120px !important;
+}
+
+#title-bar {
+	height: 5% !important;
+	min-height: 30px !important;
+    background-color: #050a1d;
+    border-radius: 20px;
+}
+
+#title-text {
+    /* height: 100% !important; */
+    /* min-height: 30px !important; */
+    text-align: center;
+    /* color: white; */
+    font-size: 14px;
+    padding-top: 2px;
+    line-height: 2;
+}
+
+#bottom {
+	background-color: rgb(15, 23, 53);
+	height: 40%;
+	color: white;
+}
+
+#title-bar-btns {
+    -webkit-app-region: no-drag;
+    position: absolute;
+    top: 0px;
+    right: 9px;
+    height: 5% !important;
+    min-height: 30px !important;
+}
+
+#title-bar-btns button {
+    width: 30px;
+    height: 24px;
+    margin: 6px 3px;
+    background-color: #1c2235;
+    border-radius: 6px;
+    border: none;
+    color: grey;
+    font-size: 16px;
+    float: left;
+}
+
+#title-bar-btns path:hover {
+    pointer-events: bounding-box;
+}
+
+#title-bar-btns path:hover {
+    cursor: pointer;
+}
+
+#title-bar-btns svg:hover {
+    cursor: pointer;
+}
+
+#title-bar-btns button:hover {
+    cursor: pointer;
+    background: #293350;
+}
+
+#title-bar-btns button:focus {
+    outline: none;
+}
+
+.col-12 {
+	text-align: center !important;
+	margin: auto;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+@keyframes inner-spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.inner-spinner div {
+	position: absolute;
+	animation: inner-spinner 1s linear infinite;
+	width: 160px;
+	height: 160px;
+	top: 20px;
+	left: 20px;
+	border-radius: 50%;
+	box-shadow: 0 4px 0 0 #df1c29;
+	transform-origin: 80px 82px;
+}
+#spinner {
+	margin: auto;
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	overflow: hidden;
+	background: rgb(13, 19, 43);
+}
+.inner-spinner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform: translateZ(0) scale(1);
+	backface-visibility: hidden;
+	transform-origin: 0 0; /* see note above */
+}
+.inner-spinner div {
+	box-sizing: content-box;
+}
+
+#captcha-form {
+	margin: auto;
+}
+
+#harvesterType,
+#harvesterName,
+#count {
+    color: #b7c7fa;
+    display: inline;
+    vertical-align: top;
+    font-size: 18px;
+    padding-left: 5px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font: Regular SF Pro Text;
+    color: #b7c7fa;
+    background: transparent !important;
+}
+.center {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+    min-height: 90vh;
+    position: relative;
+}
+.ring {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: ring 2s linear infinite;
+    text-align: center;
+    
+}
+@keyframes ring {
+	0% {
+		transform: rotate(0deg);
+		box-shadow: 1px 5px 2px #95edd7;
+	}
+	50% {
+		transform: rotate(180deg);
+		box-shadow: 1px 5px 2px #1096ef;
+	}
+	100% {
+		transform: rotate(0360deg);
+		box-shadow: 1px 5px 2px #b7fae4;
+	}
+}
+.ring::before {
+	position: absolute;
+	left: 0;
+	content: "";
+	top: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+#waiting {
+	color: #b7c7fa;
+    font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 200px;
+	animation: text 3s ease-in-out infinite;
+}
+@keyframes text {
+	50% {
+		color: #03070e;
+	}
+}
+.footerSvg {
+    width: 100%;
+    height: 54px;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+.container {
+    background: #050a1d;
+    height: 100%;
+    width: 100%;
+}
+
+#title-bar-left {
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    font-size: 13px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: #1D2230;
+}
+.top-bar-icon {
+    fill: #808080;
+}
+
+#footer-left-text {
+    font-size: 13px;
+    width: 113px;
+    position: absolute;
+    left: 11px;
+    top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#footer-right-text {
+    position: absolute;
+    right: 11px;
+    top: 10px;
+    font-size: 13px;
+}
+
+#footer-center-icon {
+    position: absolute;
+    left: 146px;
+    top: -10px;
+}
+
+    </style>
+    
+</head>
+
+
+<body>
+    <div class="container">
+
+        <div class="center">
+                <div class="ring"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+</body></html>
